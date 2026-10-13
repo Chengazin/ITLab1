@@ -11,6 +11,8 @@ def add_in_base(a: str, b: str, base: int) -> str:
                     add_in_base("1011", "111", 2) -> "10010"
                     add_in_base("FF", "1", 16) -> "100"
                 """
+    if not (2 <= base <= 36):
+       raise ValueError("Основание должно быть от 2 до 36")            
     try:
         
         digits= "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -29,4 +31,4 @@ def add_in_base(a: str, b: str, base: int) -> str:
         return("Неверный тип данных. Введите заново")
     
     
-print(add_in_base("Z", "1", "36"))
+print(add_in_base("Z", "1", 37))
