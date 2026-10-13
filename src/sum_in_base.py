@@ -28,6 +28,6 @@ def add_in_base(a: str, b: str, base: int) -> str:
             resnum //= base
         return res
     except ValueError:
-        return "Недопустимый операнд для данной системы счисления"
+        raise ValueError ("Недопустимый операнд для данной системы счисления")
     except TypeError:
-        return("Неверный тип данных. Введите заново")
+        raise TypeError("Неверный тип данных. Введите заново")
