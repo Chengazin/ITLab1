@@ -27,8 +27,7 @@ def add_in_base(a: str, b: str, base: int) -> str:
             res = digits[resnum % base] + res
             resnum //= base
         return res
+    except ValueError:
+        return "Недопустимый операнд для данной системы счисления"
     except TypeError:
         return("Неверный тип данных. Введите заново")
-    
-    
-print(add_in_base("Z", "1", 37))
